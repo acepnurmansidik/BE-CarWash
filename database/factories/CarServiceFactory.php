@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,13 @@ class CarServiceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'slug' => Str::slug(fake()->name()),
+            'price' => fake()->numberBetween(40000, 8000000),
+            'about' => fake()->sentence(),
+            'photo' => fake()->imageUrl(640, 480, 'animals', true),
+            'icon' => fake()->imageUrl(640, 480, 'animals', true),
+            'duration_in_hour' => fake()->numberBetween(1, 5),
         ];
     }
 }

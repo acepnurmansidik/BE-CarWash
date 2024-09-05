@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,8 @@ class CityFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->city(),
+            'slug' => Str::slug(fake()->city()),
         ];
     }
 }
