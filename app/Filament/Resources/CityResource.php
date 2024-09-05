@@ -26,7 +26,7 @@ class CityResource extends Resource
                 // untuk membuat form berupa text input
                 Forms\Components\TextInput::make('name')
                 ->required()
-                ->helperText('Gunakana nama kota yang sesuai bisnis anda.')
+                ->helperText('Gunakan nama kota yang sesuai bisnis anda.')
                 ->maxLength(255),
             ]);
     }
