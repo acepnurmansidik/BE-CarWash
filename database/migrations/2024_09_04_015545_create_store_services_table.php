@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreignId("car_store_id")->constrained()->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
+
+            $table->unique(['car_service_id','car_store_id']);
         });
     }
 

@@ -9,13 +9,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class StoreService extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
     protected $fillable = ["car_service_id", 'car_store_id'];
 
     public function store():BelongsTo{
-        return $this->belongsTo(CarStore::class);
+        return $this->belongsTo(CarStore::class, 'car_store_id');
     }
     public function service():BelongsTo{
-        return $this->belongsTo(CarService::class);
+        return $this->belongsTo(CarService::class, 'car_service_id');
     }
 }

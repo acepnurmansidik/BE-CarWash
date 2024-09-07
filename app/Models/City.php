@@ -21,6 +21,6 @@ class City extends Model
     }
 
     public function store():HasMany{
-        return $this->hasMany(CarStore::class);
+        return $this->hasMany(CarStore::class, 'city_id');
     }
 }

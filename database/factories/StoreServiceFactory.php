@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\CarService;
+use App\Models\CarStore;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class StoreServiceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'car_service_id' => CarService::factory(),
+            'car_store_id' => CarStore::factory(),
         ];
     }
 }

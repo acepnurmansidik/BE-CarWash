@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('car_stores', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->require();
             $table->string('slug')->unique();
             $table->string('thumbnail');
             $table->string('cs_name');
