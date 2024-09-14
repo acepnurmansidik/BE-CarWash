@@ -24,6 +24,11 @@ class CarStore extends Model
         'phone_number',
         'cs_name',
     ];
+
+    public function setNameAttribute($value){
+        $this->attributes['name'] = $value;
+        $this->attributes['slug'] = Str::slug($value);
+    }
     
     public function photos():HasMany{
         return $this->hasMany(StorePhoto::class, 'car_store_id');
@@ -35,10 +40,5 @@ class CarStore extends Model
 
     public function city():BelongsTo{
         return $this->belongsTo(City::class, 'city_id');
-    }
-
-    public function setNameAttribute($value){
-        $this->attributes['name'] = $value;
-        $this->attributes['slug'] = Str::slug($value);
     }
 }

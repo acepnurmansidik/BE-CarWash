@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\StorePhotoResource\RelationManagers;
+namespace App\Filament\Resources\CarStoreResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Forms\Form;

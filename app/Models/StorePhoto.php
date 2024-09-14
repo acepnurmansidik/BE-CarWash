@@ -10,7 +10,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class StorePhoto extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table = 'store_services';
-
     protected $fillable = ["photo", 'car_store_id'];
 }

@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CarStoreResource\Pages;
 use App\Filament\Resources\CarStoreResource\RelationManagers;
-use App\Filament\Resources\StorePhotoResource\RelationManagers\PhotosRelationManager;
+use App\Filament\Resources\CarStoreResource\RelationManagers\PhotosRelationManager;
 use App\Models\CarService;
 use App\Models\CarStore;
 use Filament\Forms;
