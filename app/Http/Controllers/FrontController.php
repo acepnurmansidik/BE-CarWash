@@ -47,4 +47,12 @@ class FrontController extends Controller
         $carService = CarService::where("id", $serviceTypeId)->first();
         return view("front.details", ['carStore' => $carStore, 'carService' => $carService]);
     }
+
+    public function booking(CarStore $carStore){
+        session()->put('carStoreId', $carStore->id);
+        // get data service from session
+        $serviceTypeId = session()->get('serviceTypeId');
+        $carService = CarService::where('id', $serviceTypeId)->first();
+        return view("front.booking", [ 'carStore' => $carStore, 'carService' => $carService ]);
+    }
 }
