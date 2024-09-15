@@ -10,7 +10,7 @@ Route::get('/transactions', [FrontController::class, 'transactions'])
 ->name("front.transactions");
 
 Route::post('/transactions/details', [FrontController::class, 'transaction_details'])
-->name("front.transaction.details");
+->name("front.transaction_details");
 
 Route::get('/search', [FrontController::class, 'search'])
 ->name("front.search");
@@ -31,4 +31,4 @@ Route::get('/booking/{carStore}/{carService}/payment', [FrontController::class, 
 ->name("front.booking.payment");
 
 Route::get('/booking/success/{bookingTransaction}', [FrontController::class, 'success_booking'])
-->name("front.success.booking");
+->name("front.success_booking");
