@@ -33,7 +33,8 @@
         <button type="submit" class="w-full rounded-full p-[12px_20px] bg-[#FF8E62] font-bold text-white">View My Booking</button>
       </form>
     </div>
-    <nav id="Bottom-nav" class="fixed bottom-0 w-full max-w-[640px] mx-auto border-t border-[#E9E8ED] p-[20px_24px] bg-white z-20">
+     <x-nav-link :active="'orders'"></x-nav-link>
+    {{-- <nav id="Bottom-nav" class="fixed bottom-0 w-full max-w-[640px] mx-auto border-t border-[#E9E8ED] p-[20px_24px] bg-white z-20">
       <ul class="flex items-center justify-evenly">
         <li>
           <a href="index.html" class="flex flex-col items-center text-center gap-1">
@@ -68,6 +69,6 @@
           </a>
         </li>
       </ul>
-    </nav>
+    </nav> --}}
   </main>
 @endsection
