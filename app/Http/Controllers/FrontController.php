@@ -32,11 +32,19 @@ class FrontController extends Controller
 
         $city = City::find($cityId);
 
+        // save service to session
         session()->put('serviceTypeId', $request->input('service_type'));
         return view("front.stores",[
             'stores' => $stores,
             'carService' => $carService,
             'cityName' => $city ? $city->name : "Unknown City",
         ]);
+    }
+
+    public function details(CarStore $carStore){
+        // get service from session
+        $serviceTypeId = session()->get('serviceTypeId');
+        $carService = CarService::where("id", $serviceTypeId)->first();
+        return view("front.details", ['carStore' => $carStore, 'carService' => $carService]);
     }
 }
