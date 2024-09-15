@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ asset('output.css') }}" rel="stylesheet">
-  <link href="{{ asset('main.css') }}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-</head>
-<body>
+@extends('front.layouts.app')
+@section('title', 'Booking Detail | Cuci Mobil AquWash')
+@section('content')
   <main class="bg-[#FAFAFA] max-w-[640px] mx-auto min-h-screen relative flex flex-col has-[#CTA-nav]:pb-[120px] has-[#Bottom-nav]:pb-[120px]">
     <div class="bg-[#270738] absolute top-0 max-w-[640px] w-full mx-auto rounded-b-[50px] h-[472px]"></div>
     <div id="Top-nav" class="flex items-center justify-between px-8 pt-5 relative z-10">
@@ -40,7 +33,7 @@
                 </div>
               </div>
             </div>
-            <p class="rounded-full p-[6px_10px] {{ $details->is_paid ? 'bg-[#41BE64]' : 'bg-[#FFCE51]' }} w-fit font-bold text-xs leading-[18px]">{{ $details->is_paid ? 'PAID' : 'PENDING' }}</p>
+            <p class="rounded-full p-[6px_10px] {{ $details->is_paid ? 'bg-[#41BE64] text-white' : 'bg-[#FFCE51]' }} w-fit font-bold text-xs leading-[18px]">{{ $details->is_paid ? 'PAID' : 'PENDING' }}</p>
           </div>
         </div>
       </div>
@@ -118,5 +111,4 @@
       <a href="tel:{{ $details->store_details->phone_number }}" class="w-full rounded-full p-[12px_20px] bg-[#FF8E62] font-bold text-white text-center">Call Customer Service</a>
     </div>
   </main>
-</body>
-</html>
+@endsection
